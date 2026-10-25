@@ -79,6 +79,25 @@
     @media(hover:hover) and (pointer:fine){.event-stage:hover .event-banner{border-color:rgba(255,255,255,.3);box-shadow:0 36px 84px rgba(0,0,0,.46),0 0 28px rgba(41,151,255,.04)}}
     @media(max-width:760px){.event-contact-cue{top:1rem;right:1rem;font-size:.7rem}}
     @media(prefers-reduced-motion:reduce){.event-stage .event-banner{transform:none!important}}
+    .project.project-devday{--project-accent:0,187,74}
+    .devday-visual{min-width:0;min-height:0}
+    .devday-screen{position:relative;inset:auto;margin:1rem 0 0 7%;min-height:26rem;isolation:isolate;background:radial-gradient(ellipse at 100% 60%,rgba(0,187,74,.07),transparent 65%),#0a0e13}
+    .devday-screen .screen-head{position:relative;z-index:2;background:#13181d;color:#a0aab4;font-size:.65rem;gap:.5rem}
+    .devday-dots{color:#00bb4a;letter-spacing:.13em}
+    .devday-body{position:relative;z-index:2;padding:1.5rem 7rem 1.5rem 1.5rem}
+    .devday-label{font:.65rem/1.5 "SFMono-Regular",Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:#98b0a1}
+    .devday-body h4{margin:.55rem 0 .75rem;font-size:1.8rem;line-height:1.1;letter-spacing:-.045em;font-weight:600}
+    .devday-body p{margin:0;color:#adb9b0;font-size:.78rem;line-height:1.6}
+    .devday-stack{margin:.6rem 0 0}.devday-stack>div{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
+    .devday-stack dt{color:#e0e7e2;font-size:.8rem;line-height:1.5}.devday-stack dd{margin:.2rem 0 0;color:#98a99f;font:.67rem/1.6 "SFMono-Regular",Consolas,monospace}
+    .devday-badge{display:inline-block;margin-top:1rem;padding:.45rem .6rem;border:1px solid rgba(255,255,255,.12);border-radius:.5rem;background:rgba(255,255,255,.025);color:#c6d5cb;font:.65rem/1.4 "SFMono-Regular",Consolas,monospace}
+    .devday-mascot{position:absolute;z-index:1;width:16rem;height:16rem;right:-9rem;top:6rem;border-radius:50%;background:#00bb4a;transform:rotate(-16deg);pointer-events:none}
+    .devday-mascot i{position:absolute;left:20%;top:37%;width:25%;height:7%;background:#03170a}.devday-mascot i::after{content:"";position:absolute;left:36%;top:-130%;width:28%;height:360%;background:#03170a}.devday-mascot i+i{left:65%;top:42%}
+    @media(max-width:960px){.devday-screen{margin:0}.devday-body{padding-right:9rem}.devday-mascot{right:-7rem}}
+    @media(max-width:480px){.devday-body{padding:1.25rem 5rem 1.25rem 1rem}.devday-body h4{font-size:1.55rem}.devday-mascot{right:-11.25rem;top:7rem}.devday-mascot i:first-child{left:4%}.devday-screen .screen-head{padding-inline:1rem;font-size:.6rem}}
+    .project-screen{--screen-rest-x:3deg;--screen-rest-y:-7deg;transform:perspective(900px) rotateX(calc(var(--screen-rest-x) + var(--screen-tilt-x,0deg))) rotateY(calc(var(--screen-rest-y) + var(--screen-tilt-y,0deg)));transition:border-color 450ms var(--ease),box-shadow 450ms var(--ease)}
+    @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.project-visual:hover .project-screen{border-color:rgba(255,255,255,.23);box-shadow:0 34px 76px rgba(0,0,0,.42),0 0 28px rgba(var(--project-accent),.06)}}
+    @media(max-width:760px){.project-screen{--screen-rest-x:0deg;--screen-rest-y:0deg}}
   </style>
   <noscript><style>.reveal{opacity:1;transform:none;filter:none}</style></noscript>
 </head>
@@ -114,7 +133,16 @@
     </div></div></section>
     <section id="work"><div class="shell"><header class="section-head reveal"><p class="eyebrow">Projetos selecionados</p><h2>Código público, contexto claro.</h2><p>Os destaques abaixo são projetos de estudo e portfólio documentados nos repositórios públicos do GitHub.</p></header><div class="projects-list">
       <article class="project reveal"><div class="project-copy"><span class="project-number">PROJETO DE ESTUDO · DIO</span><h3>Budget Spring AI</h3><p>API de orçamento pessoal que registra e consulta gastos por texto ou voz. O projeto evolui um desafio da DIO com totalização por categoria, integração com modelos da OpenAI e separação entre domínio, aplicação e infraestrutura.</p><div class="project-stack"><span>Java 21</span><span>Spring Boot 3.4.1</span><span>Spring AI</span><span>MySQL 9</span><span>Docker</span></div><a class="project-link" href="https://github.com/mouraadev/budget-spring-ai" target="_blank" rel="noopener" aria-label="Abrir o repositório Budget Spring AI no GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><div class="project-visual" aria-hidden="true"><div class="project-screen"><div class="screen-head"><span>BUDGET SPRING AI</span><span>REST API</span></div><div class="screen-body"><div class="request-line"><span class="request-method">POST</span><span>/transactions/chat</span><span class="request-code">texto</span></div><div class="request-line"><span class="request-method">POST</span><span>/transactions/voice</span><span class="request-code">áudio</span></div><div class="request-line"><span class="request-method">@Tool</span><span>PersistTransaction</span><span class="request-code">JPA</span></div><div class="request-line"><span class="request-method">@Tool</span><span>GetTotalByCategory</span><span class="request-code">MySQL</span></div></div></div></div></article>
-      <article class="project reveal"><div class="project-copy"><span class="project-number">PROJETO FINAL DE BOOTCAMP · DIO</span><h3>Design Patterns E-commerce</h3><p>Sistema simplificado de pedidos em Java criado para consolidar oito padrões de projeto em um único domínio: Builder, Factory Method, Decorator, Strategy, Observer, Chain of Responsibility, Facade e Singleton.</p><div class="project-stack"><span>Java</span><span>Maven</span><span>Design Patterns</span><span>Orientação a Objetos</span></div><a class="project-link" href="https://github.com/mouraadev/design-patterns-ecommerce" target="_blank" rel="noopener" aria-label="Abrir o repositório Design Patterns E-commerce no GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><div class="project-visual" aria-hidden="true"><div class="project-screen"><div class="screen-head"><span>PEDIDO / PADRÕES</span><span>JAVA</span></div><div class="screen-body"><div class="queue-graph"><i style="height:42%"></i><i style="height:58%"></i><i style="height:49%"></i><i style="height:76%"></i><i style="height:64%"></i><i style="height:88%"></i><i style="height:71%"></i><i style="height:96%"></i></div></div></div></div></article>
+      <article class="project project-devday reveal">
+        <div class="project-copy"><span class="project-number">HACKATHON EM EQUIPE · 4ª COLOCAÇÃO</span><h3>DevDay Hackathon</h3><p>Maternal Care: MVP para acompanhar a gestação, organizar consultas e gerenciar solicitações de atendimento, com áreas para gestantes, profissionais de saúde e administradores. Desenvolvido em equipe no DevDay Exchange Community Hackathon, em São Paulo.</p><div class="project-stack"><span>React</span><span>TypeScript</span><span>Vite</span><span>Firebase</span></div><a class="project-link" href="https://github.com/mouraadev/devday-hackathon" target="_blank" rel="noopener" aria-label="Abrir o repositório DevDay Hackathon no GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div>
+        <div class="project-visual devday-visual">
+          <div class="project-screen devday-screen">
+            <div class="screen-head"><span class="devday-dots" aria-hidden="true">● ● ●</span><span>maternal-care / stack</span></div>
+            <div class="devday-body"><span class="devday-label">DevDay · São Paulo</span><h4>Maternal Care</h4><p>Acompanhamento da gestação e gestão de atendimentos.</p><dl class="devday-stack"><div><dt>Frontend</dt><dd>React · TypeScript · Vite</dd></div><div><dt>Dados e autenticação</dt><dd>Firestore · Firebase Auth</dd></div><div><dt>Testes</dt><dd>Vitest · Playwright</dd></div></dl><span class="devday-badge">MVP de hackathon</span></div>
+            <div class="devday-mascot" aria-hidden="true"><i></i><i></i></div>
+          </div>
+        </div>
+      </article>
       <article class="project reveal"><div class="project-copy"><span class="project-number">REPOSITÓRIO PÚBLICO · PYTHON</span><h3>FRIDAY Terminal AI</h3><p>Assistente virtual executado no terminal, com respostas em streaming, histórico de conversa e modos de interação. A aplicação usa Python e o modelo GPT-OSS por meio da API da Together.</p><div class="project-stack"><span>Python</span><span>Together API</span><span>GPT-OSS</span><span>Streaming</span></div><a class="project-link" href="https://github.com/mouraadev/friday-terminal-AI" target="_blank" rel="noopener" aria-label="Abrir o repositório FRIDAY Terminal AI no GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><div class="project-visual" aria-hidden="true"><div class="project-screen"><div class="screen-head"><span>FRIDAY / TERMINAL</span><span>STREAMING</span></div><div class="screen-body"><div class="pipeline"><div class="pipeline-flow"><div class="pipeline-node">PROMPT<br>LOCAL</div><div class="pipeline-line"></div><div class="pipeline-node">TOGETHER<br>API</div><div class="pipeline-line"></div><div class="pipeline-node">RESPOSTA<br>STREAM</div></div></div></div></div></div></article>
     </div></div></section>
     <section class="credentials" id="credentials"><div class="shell credential-panel reveal"><div class="credential-top"><h2>Formação e aprendizado.</h2><p>Graduação em andamento e cursos concluídos, conectados ao meu foco em desenvolvimento back-end.</p></div><div class="credential-list"><article class="credential"><small>Graduação em andamento</small><h3>Análise e Desenvolvimento de Sistemas</h3><p>Universidade Anhembi Morumbi</p></article><article class="credential"><small>Estudos atuais</small><h3>Java, Spring Boot e AWS</h3><p>Aprofundamento em back-end e computação em nuvem, complementado por projetos em Python.</p></article><article class="credential"><small>Idiomas</small><h3>Comunicação</h3><p>Português · Fluente ou nativo<br>Inglês · Avançado<br>Alemão · Básico</p></article></div>
@@ -130,6 +158,38 @@
     const sections=[...document.querySelectorAll('main section[id]')];let scrollTicking=false;const updateScrollState=()=>{navbar.classList.toggle('scrolled',window.scrollY>24);let current='home';sections.forEach(section=>{if(window.scrollY>=section.offsetTop-180)current=section.id});navLinks.querySelectorAll('a').forEach(link=>{const active=link.getAttribute('href')===`#${current}`;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});scrollTicking=false};window.addEventListener('scroll',()=>{if(!scrollTicking){requestAnimationFrame(updateScrollState);scrollTicking=true}},{passive:true});updateScrollState();
     const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});document.querySelectorAll('.reveal:not(.visible)').forEach(element=>revealObserver.observe(element));
     if(!reduceMotion.matches&&window.matchMedia('(pointer: fine)').matches){let pointerFrame;window.addEventListener('pointermove',event=>{cancelAnimationFrame(pointerFrame);pointerFrame=requestAnimationFrame(()=>{document.documentElement.style.setProperty('--mx',`${event.clientX}px`);document.documentElement.style.setProperty('--my',`${event.clientY}px`)})},{passive:true});const runtime=document.getElementById('runtimeCard');runtime.addEventListener('pointermove',event=>{const rect=runtime.getBoundingClientRect(),rx=((event.clientY-rect.top)/rect.height-.5)*-3,ry=((event.clientX-rect.left)/rect.width-.5)*5;runtime.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`});runtime.addEventListener('pointerleave',()=>{runtime.style.transform='rotateY(-4deg) rotateX(2deg)'})}
+
+    // Project dashboards: damped movement measured on the stationary wrapper.
+    (()=>{
+      const pointer=matchMedia('(hover: hover) and (pointer: fine)');
+      document.querySelectorAll('#work .project-visual').forEach(stage=>{
+        const screen=stage.querySelector('.project-screen');
+        let x=0,y=0,vx=0,vy=0,tx=0,ty=0,frame=0,last=0;
+        const enabled=()=>pointer.matches&&!reduceMotion.matches;
+        const spring=(p,v,t,dt)=>{const offset=p-t,c=v+16*offset,decay=Math.exp(-16*dt);return[t+(offset+c*dt)*decay,(v-16*c*dt)*decay]};
+        const paint=()=>{screen.style.setProperty('--screen-tilt-x',x+'deg');screen.style.setProperty('--screen-tilt-y',y+'deg')};
+        const tick=time=>{
+          const dt=Math.min((time-last)/1000,.05);last=time;
+          [x,vx]=spring(x,vx,tx,dt);[y,vy]=spring(y,vy,ty,dt);paint();
+          if(Math.abs(x-tx)+Math.abs(y-ty)+Math.abs(vx)+Math.abs(vy)>.002)frame=requestAnimationFrame(tick);
+          else{frame=0;x=tx;y=ty;vx=vy=0;paint();screen.style.willChange=''}
+        };
+        const animate=()=>{if(!frame){last=performance.now();screen.style.willChange='transform';frame=requestAnimationFrame(tick)}};
+        const reset=()=>{cancelAnimationFrame(frame);frame=0;x=y=vx=vy=tx=ty=0;screen.style.removeProperty('--screen-tilt-x');screen.style.removeProperty('--screen-tilt-y');screen.style.willChange=''};
+        stage.addEventListener('pointermove',event=>{
+          if(!enabled()||event.pointerType==='touch')return;
+          const r=stage.getBoundingClientRect();
+          if(!r.width||!r.height)return;
+          tx=(Math.max(0,Math.min(1,(event.clientY-r.top)/r.height))-.5)*-4;
+          ty=(Math.max(0,Math.min(1,(event.clientX-r.left)/r.width))-.5)*6;
+          animate();
+        },{passive:true});
+        const settle=()=>{tx=ty=0;if(enabled())animate();else reset()};
+        stage.addEventListener('pointerleave',settle);stage.addEventListener('pointercancel',settle);window.addEventListener('blur',settle);
+        reduceMotion.addEventListener('change',reset);pointer.addEventListener('change',reset);
+        window.addEventListener('resize',reset,{passive:true});document.addEventListener('visibilitychange',()=>{if(document.hidden)reset()});
+      });
+    })();
 
     // Critically damped, interruptible tilt; each axis retains its current velocity.
     (()=>{
