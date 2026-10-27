@@ -1,0 +1,13 @@
+const fs=require('node:fs');
+let html=fs.readFileSync('index.html','utf8');
+const previous=fs.readFileSync('tmp/index-before-photo-motion.html','utf8');
+fs.writeFileSync('tmp/index-before-competencies-return.html',html);
+const hero=previous.match(/<section class="hero"[\s\S]*?<\/section>/)[0];
+const runtime=html.match(/^      <div class="runtime-wrap[^\r\n]+/m)[0].trim();
+html=html.replace(/<section class="hero"[\s\S]*?<\/section>/,hero);
+html=html.replace('</p></header><div class="bento">','</p></header>'+runtime+'<div class="bento">');
+const start=previous.indexOf('    .hero{min-height:0;');
+const end=previous.indexOf('    .about-actions',start);
+const responsive=previous.split(/\r?\n/).filter(line=>line.startsWith('    @media(max-width:960px){.hero-grid{grid-template-columns:1fr 1fr;')||line.startsWith('    @media(max-width:760px){.hero{padding:6.5rem')).join('\n');
+html=html.replace('  </style>',previous.slice(start,end)+'    .capabilities .runtime-wrap{width:min(100% - 5rem,44rem);margin:0 auto 4rem}\n'+responsive+'\n  </style>');
+fs.writeFileSync('index.html',html);

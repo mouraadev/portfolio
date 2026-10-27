@@ -1,0 +1,13 @@
+const fs=require('node:fs');
+let html=fs.readFileSync('index.html','utf8');
+const previous=fs.readFileSync('tmp/index-before-whatsapp.html','utf8');
+const hero=previous.match(/<section class="hero"[\s\S]*?<\/section>/)[0];
+const runtime=previous.match(/^      <div class="runtime-wrap[^\r\n]+/m)[0].trim();
+if(!html.includes('</header>'+runtime))throw Error('Expected dashboard in competencies');
+html=html.replace('</header>'+runtime,'</header>');
+html=html.replace(/<section class="hero"[\s\S]*?<\/section>/,hero);
+const start=html.indexOf('    .hero{min-height:0;');
+const end=html.indexOf('  </style>',start);
+if(start<0||end<0)throw Error('Expected compact hero styles');
+html=html.slice(0,start)+html.slice(end);
+fs.writeFileSync('index.html',html);

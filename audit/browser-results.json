@@ -1,0 +1,42 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "outside": []
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "outside": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "outside": []
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "outside": []
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "outside": []
+    }
+  ],
+  "navigation": [
+    "about",
+    "capabilities",
+    "work",
+    "credentials",
+    "contact"
+  ],
+  "accessibility": [],
+  "errors": [],
+  "keyboard": "skip link, menu Tab/Escape, anchor focus, details Enter/Space: passed",
+  "preferences": "reduced motion, dynamic cancellation, transparency and contrast: passed",
+  "restoredMotion": "perspective pointer interaction, animated flow, cancellation with reduced motion: passed",
+  "portability": "file URL and localhost; no-JavaScript mobile: passed"
+}
