@@ -112,6 +112,16 @@
     @media(max-width:480px){.hero{padding-top:7rem}.hero-grid{gap:1.3rem}.hero .hero-name{font-size:clamp(3rem,15vw,4.5rem);white-space:nowrap}.hero .hero-name span{display:inline}.hero .availability{font-size:.7rem}.hero .hero-position{font-size:.94rem}.hero .hero-actions .button{width:auto;min-height:2.9rem;padding:.65rem .9rem;font-size:.8rem}.hero .topology{height:13rem}.hero .runtime-title{display:block;font-size:.5rem;letter-spacing:0}.hero .runtime-bar{gap:.5rem;padding-inline:.75rem}.hero .runtime-status{font-size:.5rem}.hero .runtime-log{font-size:.55rem;padding-inline:1rem}}
     .experience-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:start}.experience-current{display:flex;align-items:center;gap:.6rem;margin:0 0 1.5rem;color:#a9debd;font:.75rem/1.5 Consolas,monospace}.experience-current::before{content:"";width:.4rem;height:.4rem;flex-shrink:0;border-radius:50%;background:var(--green);box-shadow:0 0 0 .25rem rgba(85,209,135,.1)}.experience-company h3{margin:0 0 .75rem;font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.04em;line-height:1.15}.experience-company p{margin:0;color:var(--muted);line-height:1.7}.experience-company .experience-role{color:var(--text)}.experience-company .experience-location{margin:.6rem 0 1.4rem;font-size:.8rem;color:#98a9bd}.experience-panel{padding:clamp(1.5rem,3vw,2.25rem);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);background:linear-gradient(135deg,rgba(26,34,46,.9),rgba(16,21,30,.95));box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 24px 60px rgba(0,0,0,.2)}.experience-row{padding:1rem 0;border-bottom:1px solid var(--line)}.experience-row:first-child{padding-top:0}.experience-row h3{margin:0 0 .5rem;font-size:1rem;letter-spacing:-.02em}.experience-row p{margin:0;color:#b3bdcc;font-size:.9rem;line-height:1.7}.experience-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 0;padding:0;list-style:none}.experience-tags li{padding:.5rem .7rem;border:1px solid #374659;border-radius:.6rem;color:#c8dff8;background:rgba(143,194,255,.03);font:.72rem/1.5 Consolas,monospace}.experience-tools{border-top:1px solid var(--line);padding-top:1rem;margin:1.5rem 0 0;color:#99aabd;font-size:.8rem;line-height:1.9}.experience-tools span{display:block}.experience-tools b{font-weight:500;color:#d4deeb}
     @media(max-width:760px){.experience-layout{grid-template-columns:minmax(0,1fr)}}
+    /* Claude Code keycaps, selected from the experience concepts. */
+    .experience-panel{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 110% 75%,rgba(201,140,111,.12),transparent 60%),linear-gradient(135deg,rgba(26,34,46,.9),rgba(16,21,30,.95))}.experience-copy{position:relative;z-index:1;width:calc(100% - 180px)}.experience-keyboard{position:absolute;right:-24px;top:100px;width:223px;display:grid;grid-template-columns:105px 105px;gap:13px;transform:rotate(-17deg);pointer-events:none;z-index:0}.experience-key{height:102px;display:grid;place-items:center;border:1px solid #65666c;border-radius:21px;background:linear-gradient(140deg,#45444a,#20242d);box-shadow:inset 0 2px 2px #ffffff28,inset 0 -9px 1px #11151e,0 13px 23px #0006;color:#e3d1c6;font:19px Consolas,monospace}.experience-key-main{grid-column:span 2;height:165px;gap:6px;align-content:center;background:linear-gradient(145deg,#edb798,#b8785f);box-shadow:inset 0 2px 3px #fff8,inset 0 -10px 1px #845640,0 17px 25px #0006}.experience-key-main small{font:12px Consolas,monospace;color:#5a382d}.experience-clawd{position:relative;width:86px;height:66px}.experience-clawd::before{content:"";position:absolute;inset:0;background:#5b392e;clip-path:polygon(16% 0,84% 0,84% 17%,100% 17%,100% 75%,84% 75%,84% 100%,66% 100%,66% 75%,34% 75%,34% 100%,16% 100%,16% 75%,0 75%,0 17%,16% 17%)}.experience-clawd::after{content:"";position:absolute;left:28%;top:28%;width:9%;height:22%;background:#dfac8d;box-shadow:31px 0 #dfac8d}
+    @media(max-width:1100px){.experience-copy{width:100%}.experience-panel{padding-bottom:245px}.experience-keyboard{top:auto;bottom:-65px;right:15px;transform:rotate(-17deg) scale(.8)}}
+    /* Compact hero, followed immediately by the existing About photograph. */
+    .hero{min-height:0;padding:7.5rem 0 2.5rem}.hero-grid{gap:1.4rem}.hero .hero-name{font-size:clamp(4rem,9.8vw,6.45rem)}.hero .hero-copy{max-width:40rem}.hero .hero-actions{margin-top:1.25rem}.about-with-event{padding-top:0}.about-intro{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding-top:1.5rem;margin-bottom:1.25rem;color:#96a2b3;font:.65rem/1.5 Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}.about-with-event .event-banner{height:clamp(20rem,28vw,25rem);min-height:20rem}.about-with-event .event-title{font-size:clamp(2rem,3.2vw,3rem)}
+    .experience-stage{perspective:1400px;min-width:0}.experience-stage.reveal{transform:none;filter:none;transition:opacity 700ms var(--ease)}.experience-panel{transition:border-color 600ms var(--ease),box-shadow 600ms var(--ease)}
+    @media(hover:hover) and (pointer:fine){.experience-stage:hover .experience-panel{border-color:rgba(255,255,255,.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 36px 84px rgba(0,0,0,.4)}}
+    @media(max-width:760px){.about-with-event .event-banner{height:25rem;min-height:25rem}.about-with-event .event-banner img{object-position:53% 40%}}
+    @media(max-width:480px){.hero{padding:6.5rem 0 2rem}.hero-grid{gap:1.2rem}.hero .hero-name{font-size:clamp(3rem,13vw,4.5rem)}.about-intro{font-size:.58rem;letter-spacing:.06em}}
+    @media(prefers-reduced-motion:reduce){.experience-stage .experience-panel{transform:none!important}}
   </style>
   <noscript><style>.reveal{opacity:1;transform:none;filter:none}</style></noscript>
   
@@ -128,9 +138,9 @@
       <div class="availability reveal"><span class="availability-dot" aria-hidden="true"></span>Atualmente na Leiloaria Smart · Automação com IA</div>
       <h1 class="hero-name reveal"><span>Ryan</span> <span>Moura</span></h1>
       <div class="hero-content reveal"><p class="hero-position">Automação com IA · Desenvolvimento Back-end</p><p class="hero-copy">Atuo com automação de processos e inteligência artificial, desenvolvendo agentes e integrando sistemas por APIs. Complemento essa experiência com projetos back-end em Java e Python.</p><div class="hero-actions"><a class="button button-primary" href="#work">Ver projetos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="button button-secondary" href="https://www.linkedin.com/in/ryanmoura-dev" target="_blank" rel="noopener">LinkedIn</a><a class="button button-secondary" href="https://github.com/mouraadev" target="_blank" rel="noopener">GitHub</a></div><p class="hero-note">PYTHON / AUTOMAÇÃO / IA — SÃO PAULO, BRASIL</p></div>
-      <div class="runtime-wrap reveal delay-1" aria-label="Diagrama da arquitetura do projeto Budget Spring AI"><div class="runtime-glow" aria-hidden="true"></div><div class="runtime" id="runtimeCard"><div class="runtime-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="runtime-title">budget-spring-ai / arquitetura</div><div class="runtime-status">público</div></div><div class="topology"><svg viewBox="0 0 500 330" preserveAspectRatio="none" aria-hidden="true"><defs><lineargradient id="flowGradient"><stop stop-color="#2997ff"></stop><stop offset="1" stop-color="#5de4ff"></stop></lineargradient></defs><path class="flow-line" d="M80 175 C155 175 160 145 235 145"></path><path class="flow-line" d="M270 140 C345 140 348 78 430 78"></path><path class="flow-line" d="M270 155 C350 155 350 252 430 252"></path><path class="flow-line" d="M250 170 C250 225 250 245 250 290"></path></svg><div class="node node-api"><b>VOZ / TEXTO</b><span>REST</span></div><div class="node node-core"><b>USE CASES</b><span>@Tool</span></div><div class="node node-db"><b>MYSQL 9</b><span>JPA</span></div><div class="node node-queue"><b>SPRING AI</b><span>OpenAI</span></div><div class="node node-cache"><b>DOMÍNIO</b><span>DDD</span></div></div><div class="runtime-log" aria-hidden="true"><div class="log-line"><span class="log-ok">POST</span><span>/transactions/chat</span><span class="log-blue">texto</span></div><div class="log-line"><span class="log-ok">POST</span><span>/transactions/voice</span><span class="log-blue">áudio</span></div><div class="log-line"><span class="log-ok">TOOL</span><span>GetTotalSpentByCategory</span></div></div></div><div class="metric-float metric-latency"><small>runtime</small><strong>Java 21</strong></div><div class="metric-float metric-uptime"><small>framework</small><strong>Spring Boot 3</strong></div></div>
     </div></section>
     <section id="about" class="about-with-event">
+      <div class="shell about-intro"><span>Sobre</span><span>Além do código</span></div>
       <div class="shell event-stage reveal">
         <figure class="event-banner">
           <a class="event-contact-link" href="#contact" aria-label="Ir para a seção Contato de Ryan Moura"></a>
@@ -155,11 +165,15 @@
       <header class="section-head reveal"><p class="eyebrow">Experiência profissional</p><h2 id="experience-title">Automação aplicada<br>ao dia a dia.</h2></header>
       <div class="experience-layout">
         <div class="experience-company reveal"><div class="experience-current">Nov. 2026 — atual</div><h3>Leiloaria Smart</h3><p class="experience-role">Estagiário de automação com IA</p><p class="experience-location">São Paulo · Presencial</p><p>Mapeamento de processos e desenvolvimento de soluções para reduzir tarefas manuais e integrar sistemas.</p></div>
-        <div class="experience-panel reveal delay-1">
+        <div class="experience-stage reveal delay-1"><div class="experience-panel">
+          <div class="experience-copy">
           <div class="experience-row"><h3>Agentes e ferramentas</h3><p>Python, TypeScript e Node.js para soluções com IA; tools e servidores MCP para acesso a dados e ferramentas.</p></div>
           <div class="experience-row"><h3>Integrações e interfaces</h3><p>APIs REST conectando plataformas e sistemas internos. Interfaces React para interação com agentes.</p></div>
           <ul class="experience-tags" aria-label="Tecnologias da experiência"><li>Python</li><li>TypeScript</li><li>Node.js</li><li>MCP</li><li>React</li></ul>
           <p class="experience-tools"><span><b>No desenvolvimento:</b> Claude Code · Codex</span><span><b>Infraestrutura e dados:</b> AWS · SQL</span></p>
+          </div>
+          <div class="experience-keyboard" aria-hidden="true"><div class="experience-key experience-key-main"><div class="experience-clawd"></div><small>Claude Code</small></div><div class="experience-key">⌘</div><div class="experience-key">enter</div></div>
+        </div>
         </div>
       </div>
     </div></section>
@@ -240,9 +254,10 @@
       });
     })();
 
-    // Critically damped, interruptible tilt; each axis retains its current velocity.
+    // Critically damped, interruptible tilt shared by the event photo and experience card.
     (()=>{
-      const stage=document.querySelector('.event-stage'),photo=stage.querySelector('.event-banner');
+      document.querySelectorAll('.event-stage, .experience-stage').forEach(stage=>{
+      const photo=stage.querySelector('.event-banner, .experience-panel');
       const finePointer=window.matchMedia('(hover: hover) and (pointer: fine)');
       let x=0,y=0,vx=0,vy=0,targetX=0,targetY=0,frame=0,last=0;
       const enabled=()=>finePointer.matches&&!reduceMotion.matches;
@@ -271,6 +286,8 @@
       window.addEventListener('blur',settle);
       reduceMotion.addEventListener('change',reset);finePointer.addEventListener('change',reset);
       document.addEventListener('visibilitychange',()=>{if(document.hidden)reset()});
+      window.addEventListener('resize',reset,{passive:true});
+      });
     })();
   </script>
 
